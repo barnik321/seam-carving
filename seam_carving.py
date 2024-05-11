@@ -325,7 +325,8 @@ def object_removal(im, rmask, mask=None, vis=False, horizontal_removal=False):
         if mask is not None:
             mask = rotate_image(mask, True)
 
-    while len(cp.where(rmask > MASK_THRESHOLD)[0]) > 0:
+    while (k:=len(cp.where(rmask > MASK_THRESHOLD)[0])) > 0:
+        print(k)
         seam_idx, boolmask = get_minimum_seam(output, mask, rmask)
         if vis:
             visualize(output, boolmask, rotate=horizontal_removal)
