@@ -10,6 +10,7 @@
 # import cupy as cp
 import numpy as np
 cp = np
+cp.asnumpy = cp.array
 import cv2
 # import argparse
 from numba import jit
