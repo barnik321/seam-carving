@@ -363,7 +363,7 @@ def remove_object(image, mask):
 
     im = cp.array(image)
     assert im is not None
-    mask = cp.array(cv2.imread(mask, cv2.COLOR_BGR2GRAY))
+    mask = cp.array(cv2.cvtColor(mask, cv2.COLOR_BGR2GRAY))
 
     # downsize image for faster processing
     h, w = im.shape[:2]
