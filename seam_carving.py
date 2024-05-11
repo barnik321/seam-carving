@@ -7,8 +7,9 @@
 # python seam_carving.py -remove -im demos/eiffel.jpg -out eiffel_remove.jpg 
 #        -rmask demos/eiffel_mask.jpg -vis
 
-import cupy as cp
+# import cupy as cp
 import numpy as np
+cp = np
 import cv2
 # import argparse
 from numba import jit
