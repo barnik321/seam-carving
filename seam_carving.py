@@ -8,6 +8,7 @@
 #        -rmask demos/eiffel_mask.jpg -vis
 
 import cupy as np
+import numpy
 import cv2
 # import argparse
 from numba import jit
@@ -40,7 +41,7 @@ def resize(image, width):
     dim = None
     h, w = image.shape[:2]
     dim = (width, int(h * width / float(w)))
-    return cv2.resize(image, dim)
+    return np.array(cv2.resize(np.asnumpy(image), dim))
 
 
 def rotate_image(image, clockwise):
