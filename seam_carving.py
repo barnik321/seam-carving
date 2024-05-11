@@ -78,7 +78,7 @@ def forward_energy(im):
     https://github.com/axu2/improved-seam-carving.
     """
     h, w = im.shape[:2]
-    im = cv2.cvtColor(im.astype(cp.uint8), cv2.COLOR_BGR2GRAY).astype(cp.float64)
+    im = cp.array(cv2.cvtColor(cp.asnumpy(im.astype(cp.uint8)), cv2.COLOR_BGR2GRAY)).astype(cp.float64)
 
     energy = cp.zeros((h, w))
     m = cp.zeros((h, w))
