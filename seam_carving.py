@@ -340,7 +340,7 @@ def object_removal(im, rmask, mask=None, vis=False, horizontal_removal=False):
     return output
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # ap = argparse.ArgumentParser()
     # group = ap.add_mutually_exclusive_group(required=True)
     # group.add_argument("-resize", action='store_true')
